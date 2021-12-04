@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct Registration {
     var firstname: String
     var lastname: String
