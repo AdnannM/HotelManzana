@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		A6D7DD09275B7DA100E31CD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7DD08275B7DA100E31CD8 /* AppDelegate.swift */; };
 		A6D7DD0B275B7DA100E31CD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7DD0A275B7DA100E31CD8 /* SceneDelegate.swift */; };
-		A6D7DD0D275B7DA100E31CD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7DD0C275B7DA100E31CD8 /* ViewController.swift */; };
 		A6D7DD10275B7DA100E31CD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6D7DD0E275B7DA100E31CD8 /* Main.storyboard */; };
 		A6D7DD12275B7DA200E31CD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6D7DD11275B7DA200E31CD8 /* Assets.xcassets */; };
 		A6D7DD15275B7DA200E31CD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6D7DD13275B7DA200E31CD8 /* LaunchScreen.storyboard */; };
+		A6D7DD1D275B7E2400E31CD8 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7DD1C275B7E2400E31CD8 /* Registration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A6D7DD05275B7DA100E31CD8 /* HotelManzana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelManzana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6D7DD08275B7DA100E31CD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6D7DD0A275B7DA100E31CD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A6D7DD0C275B7DA100E31CD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A6D7DD0F275B7DA100E31CD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A6D7DD11275B7DA200E31CD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6D7DD14275B7DA200E31CD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6D7DD16275B7DA200E31CD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6D7DD1C275B7E2400E31CD8 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +40,7 @@
 		A6D7DCFC275B7DA100E31CD8 = {
 			isa = PBXGroup;
 			children = (
+				A6D7DD1C275B7E2400E31CD8 /* Registration.swift */,
 				A6D7DD07275B7DA100E31CD8 /* HotelManzana */,
 				A6D7DD06275B7DA100E31CD8 /* Products */,
 			);
@@ -58,7 +59,6 @@
 			children = (
 				A6D7DD08275B7DA100E31CD8 /* AppDelegate.swift */,
 				A6D7DD0A275B7DA100E31CD8 /* SceneDelegate.swift */,
-				A6D7DD0C275B7DA100E31CD8 /* ViewController.swift */,
 				A6D7DD0E275B7DA100E31CD8 /* Main.storyboard */,
 				A6D7DD11275B7DA200E31CD8 /* Assets.xcassets */,
 				A6D7DD13275B7DA200E31CD8 /* LaunchScreen.storyboard */,
@@ -138,8 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6D7DD0D275B7DA100E31CD8 /* ViewController.swift in Sources */,
 				A6D7DD09275B7DA100E31CD8 /* AppDelegate.swift in Sources */,
+				A6D7DD1D275B7E2400E31CD8 /* Registration.swift in Sources */,
 				A6D7DD0B275B7DA100E31CD8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
