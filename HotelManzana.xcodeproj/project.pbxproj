@@ -42,7 +42,6 @@
 		A6D7DCFC275B7DA100E31CD8 = {
 			isa = PBXGroup;
 			children = (
-				A6D7DD20275B81EC00E31CD8 /* AddRegistrationTableViewController.swift */,
 				A6D7DD07275B7DA100E31CD8 /* HotelManzana */,
 				A6D7DD06275B7DA100E31CD8 /* Products */,
 			);
@@ -59,6 +58,7 @@
 		A6D7DD07275B7DA100E31CD8 /* HotelManzana */ = {
 			isa = PBXGroup;
 			children = (
+				A6D7DD22275B90AB00E31CD8 /* Controller */,
 				A6D7DD1F275B804700E31CD8 /* Supporting Files */,
 				A6D7DD1E275B7FAB00E31CD8 /* Model */,
 				A6D7DD16275B7DA200E31CD8 /* Info.plist */,
@@ -84,6 +84,14 @@
 				A6D7DD13275B7DA200E31CD8 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A6D7DD22275B90AB00E31CD8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A6D7DD20275B81EC00E31CD8 /* AddRegistrationTableViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
