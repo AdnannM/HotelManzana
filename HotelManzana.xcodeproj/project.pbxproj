@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A6423398275E212F005951FD /* SelectRoomTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6423397275E212F005951FD /* SelectRoomTypeTableViewController.swift */; };
+		A642339A275E40CA005951FD /* RegistraionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6423399275E40CA005951FD /* RegistraionTableViewController.swift */; };
 		A6D7DD09275B7DA100E31CD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7DD08275B7DA100E31CD8 /* AppDelegate.swift */; };
 		A6D7DD0B275B7DA100E31CD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7DD0A275B7DA100E31CD8 /* SceneDelegate.swift */; };
 		A6D7DD10275B7DA100E31CD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6D7DD0E275B7DA100E31CD8 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		A6423397275E212F005951FD /* SelectRoomTypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectRoomTypeTableViewController.swift; path = HotelManzana/Controller/SelectRoomTypeTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		A6423399275E40CA005951FD /* RegistraionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistraionTableViewController.swift; path = HotelManzana/Controller/RegistraionTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		A6D7DD05275B7DA100E31CD8 /* HotelManzana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelManzana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6D7DD08275B7DA100E31CD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6D7DD0A275B7DA100E31CD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +85,6 @@
 				A6D7DD08275B7DA100E31CD8 /* AppDelegate.swift */,
 				A6D7DD11275B7DA200E31CD8 /* Assets.xcassets */,
 				A6D7DD0E275B7DA100E31CD8 /* Main.storyboard */,
-				A6423397275E212F005951FD /* SelectRoomTypeTableViewController.swift */,
 				A6D7DD13275B7DA200E31CD8 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
@@ -93,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				A6D7DD20275B81EC00E31CD8 /* AddRegistrationTableViewController.swift */,
+				A6423399275E40CA005951FD /* RegistraionTableViewController.swift */,
+				A6423397275E212F005951FD /* SelectRoomTypeTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6D7DD09275B7DA100E31CD8 /* AppDelegate.swift in Sources */,
+				A642339A275E40CA005951FD /* RegistraionTableViewController.swift in Sources */,
 				A6D7DD1D275B7E2400E31CD8 /* Registration.swift in Sources */,
 				A6D7DD21275B81EC00E31CD8 /* AddRegistrationTableViewController.swift in Sources */,
 				A6D7DD0B275B7DA100E31CD8 /* SceneDelegate.swift in Sources */,

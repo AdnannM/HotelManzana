@@ -28,6 +28,32 @@ class AddRegistrationTableViewController: UITableViewController {
     
     @IBOutlet weak var roomTypeLabel: UILabel!
     
+    var registration: Registration? {
+        guard let roomType = roomType else {
+            return nil
+        }
+            
+        let firstName = firstNameTextField.text ?? ""
+        let lastName = lastNameTextFiled.text ?? ""
+        let email = emailTextField.text ?? ""
+        let checkInDate = checkInDatePicker.date
+        let checkOutDate = checkOutDatePicker.date
+        let numberOfAdults = Int(numberOfAdultsStepper.value)
+        let numberOfChild = Int(numberOfChildrenStepper.value)
+        let hasWifi = wifiSwitch.isOn
+        
+        return Registration(firstname: firstName,
+                            lastname: lastName,
+                            email: email,
+                            checkInDate: checkInDate,
+                            checkOutDate: checkOutDate,
+                            numberOfAdults: numberOfAdults,
+                            numberOfChildren: numberOfChild,
+                            wifi: hasWifi,
+                            roomType: roomType)
+        
+    }
+    
     var roomType: RoomType?
     
     let checkInDataPickerCellIndexPath = IndexPath(row: 1,
@@ -92,29 +118,6 @@ class AddRegistrationTableViewController: UITableViewController {
     }
     
     // MARK: - Action
-    @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
-        let firstName = firstNameTextField.text ?? ""
-        let lastName = lastNameTextFiled.text ?? ""
-        let email = emailTextField.text ?? ""
-        let checkInDate = checkInDatePicker.date
-        let checkOutDate = checkOutDatePicker.date
-        let numberOfAdults = Int(numberOfAdultsStepper.value)
-        let numberOfChild = Int(numberOfChildrenStepper.value)
-        let hasWifi = wifiSwitch.isOn
-        let roomChoice = roomType?.name ?? "Not Set"
-        
-        print("Done Tapped")
-        print("First Name: \(firstName)")
-        print("Last Name: \(lastName)")
-        print("Email: \(email)")
-        print("Check-in Date: \(checkInDate)")
-        print("Check-out Date: \(checkOutDate)")
-        print("Number of Adults: \(numberOfAdults)")
-        print("Number of Child: \(numberOfChild)")
-        print("Wi-fi: \(hasWifi)")
-        print("Room Choice: \(roomChoice)")
-    }
-    
     @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
         updateDateView()
     }
@@ -133,6 +136,11 @@ class AddRegistrationTableViewController: UITableViewController {
         
         return selectedRoomTypeController
     }
+    
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
 }
 // MARK: -TableView
