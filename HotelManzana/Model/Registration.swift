@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Registration {
+struct Registration: Codable {
     var firstname: String
     var lastname: String
     var email: String
@@ -19,9 +19,27 @@ struct Registration {
     
     var wifi: Bool
     var roomType: RoomType
+    
+    static let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let archiveURL = documentDirectory.appendingPathComponent("registration").appendingPathExtension("plist")
+    
+    static func saveRegistration(_ registration: [Registration]) {
+        let propertyListEncoder = PropertyListEncoder()
+        let codedRegistration = try? propertyListEncoder.encode(registration)
+        
+        try? codedRegistration?.write(to: archiveURL, options: .noFileProtection)
+    }
+    
+    static func loadRegistration() -> [Registration]? {
+        guard let codedRegistration = try? Data(contentsOf: archiveURL) else { return nil }
+        
+        let propertyListDecoder = PropertyListDecoder()
+        
+        return try! propertyListDecoder.decode([Registration].self, from: codedRegistration)
+    }
 }
 
-struct RoomType: Equatable {
+struct RoomType: Equatable, Codable {
     var id: Int
     var name: String
     var shortName: String

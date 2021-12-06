@@ -62,9 +62,9 @@
 		A6D7DD07275B7DA100E31CD8 /* HotelManzana */ = {
 			isa = PBXGroup;
 			children = (
+				A6D7DD1E275B7FAB00E31CD8 /* Model */,
 				A6D7DD22275B90AB00E31CD8 /* Controller */,
 				A6D7DD1F275B804700E31CD8 /* Supporting Files */,
-				A6D7DD1E275B7FAB00E31CD8 /* Model */,
 				A6D7DD16275B7DA200E31CD8 /* Info.plist */,
 			);
 			path = HotelManzana;

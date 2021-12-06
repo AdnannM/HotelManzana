@@ -20,7 +20,10 @@ class RegistraionTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if let savedRegistration = Registration.loadRegistration() {
+            registraion = savedRegistration
+        }
     }
 }
 
@@ -51,6 +54,8 @@ extension RegistraionTableViewController {
      
         registraion.append(registration)
         tableView.reloadData()
+        
+        Registration.saveRegistration(registraion)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
