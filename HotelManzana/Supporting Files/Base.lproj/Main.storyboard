@@ -28,6 +28,9 @@
                                                     <rect key="frame" x="20" y="11" width="334" height="34.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="textDidEditChange:" destination="dg7-sW-Bsw" eventType="editingDidEnd" id="ZxL-gD-ecR"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -49,6 +52,9 @@
                                                     <rect key="frame" x="20" y="11" width="334" height="34.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="textDidEditChange:" destination="dg7-sW-Bsw" eventType="editingDidEnd" id="8jc-wU-KYs"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -70,6 +76,9 @@
                                                     <rect key="frame" x="20" y="11" width="334" height="34.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="textDidEditChange:" destination="dg7-sW-Bsw" eventType="editingDidEnd" id="IpL-co-mVG"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -370,6 +379,7 @@
                         <outlet property="checkInDatePicker" destination="79s-lT-Dfd" id="RLT-sC-Qk8"/>
                         <outlet property="checkOutDateLabel" destination="n0c-Dh-qWA" id="4dF-M0-qdS"/>
                         <outlet property="checkOutDatePicker" destination="eHi-qV-UNC" id="swE-bm-WY5"/>
+                        <outlet property="doneButton" destination="7CR-Rd-lEI" id="dbt-wr-2aL"/>
                         <outlet property="emailTextField" destination="jEi-hK-QNH" id="ZTn-4f-1Tx"/>
                         <outlet property="firstNameTextField" destination="ZLD-zH-eAF" id="YB0-BV-UQB"/>
                         <outlet property="lastNameTextFiled" destination="FjW-Hz-fRb" id="jaV-tU-LPs"/>

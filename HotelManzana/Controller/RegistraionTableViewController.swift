@@ -70,7 +70,7 @@ extension RegistraionTableViewController {
         }
     }
     
-    /// TODO: -  Delete Row
+    /// TODO:
     ///        Show Registration and editi Registration
     ///        Hidde Done Button - All textFiled must be filled
     ///        Add one more section for charges

@@ -28,6 +28,8 @@ class AddRegistrationTableViewController: UITableViewController {
     
     @IBOutlet weak var roomTypeLabel: UILabel!
     
+    @IBOutlet weak var doneButton: UIBarButtonItem!
+    
     var registration: Registration? {
         guard let roomType = roomType else {
             return nil
@@ -91,26 +93,12 @@ class AddRegistrationTableViewController: UITableViewController {
         let minToday = Calendar.current.startOfDay(for: Date())
         checkInDatePicker.minimumDate = minToday
         checkInDatePicker.date = minToday
-        
-//        
-//        if let selectRegistration = selectedRegistration {
-//            firstNameTextField.text = selectRegistration.firstname
-//            lastNameTextFiled.text = selectRegistration.lastname
-//            emailTextField.text = selectRegistration.email
-//            checkInDateLabel.text = "\(selectRegistration.checkInDate)"
-//            checkOutDateLabel.text = "\(selectRegistration.checkOutDate)"
-//            numberOfAdultsLabel.text = "\(Int(selectRegistration.numberOfAdults))"
-//            numberOfChildrenLabel.text = "\(Int(selectRegistration.numberOfChildren))"
-//            roomTypeLabel.text = selectRegistration.roomType.name
-//            
-//            title = "Edit Guest Registration"
-//        } else {
-//            title = "Add Guest Registration"
-//        }
-        
+    
         updateDateView()
         updateNumberOfGuest()
         updateRoomType()
+        
+        disableDoneButton()
     }
     
     
@@ -119,6 +107,13 @@ class AddRegistrationTableViewController: UITableViewController {
         checkOutDatePicker.minimumDate = Calendar.current.date(byAdding: .day, value: 1, to: checkInDatePicker.date)
         checkInDateLabel.text = dateFormatter.string(from: checkInDatePicker.date)
         checkOutDateLabel.text = dateFormatter.string(from: checkOutDatePicker.date)
+    }
+    
+    private func disableDoneButton() {
+        let firstName = firstNameTextField.text ?? ""
+        let lastName = lastNameTextFiled.text ?? ""
+        let email = emailTextField.text ?? ""
+        doneButton.isEnabled = !firstName.isEmpty && !lastName.isEmpty && !email.isEmpty
     }
     
     private func updateNumberOfGuest() {
@@ -157,6 +152,11 @@ class AddRegistrationTableViewController: UITableViewController {
     @IBAction func cancelButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func textDidEditChange(_ sender: UITextField) {
+        disableDoneButton()
+    }
+    
     
     // MARK:  - Segue
 }
