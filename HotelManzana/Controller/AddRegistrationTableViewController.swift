@@ -73,6 +73,7 @@ class AddRegistrationTableViewController: UITableViewController {
         }
     }
     
+    
     // Date Formatter
     var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
@@ -90,6 +91,22 @@ class AddRegistrationTableViewController: UITableViewController {
         let minToday = Calendar.current.startOfDay(for: Date())
         checkInDatePicker.minimumDate = minToday
         checkInDatePicker.date = minToday
+        
+//        
+//        if let selectRegistration = selectedRegistration {
+//            firstNameTextField.text = selectRegistration.firstname
+//            lastNameTextFiled.text = selectRegistration.lastname
+//            emailTextField.text = selectRegistration.email
+//            checkInDateLabel.text = "\(selectRegistration.checkInDate)"
+//            checkOutDateLabel.text = "\(selectRegistration.checkOutDate)"
+//            numberOfAdultsLabel.text = "\(Int(selectRegistration.numberOfAdults))"
+//            numberOfChildrenLabel.text = "\(Int(selectRegistration.numberOfChildren))"
+//            roomTypeLabel.text = selectRegistration.roomType.name
+//            
+//            title = "Edit Guest Registration"
+//        } else {
+//            title = "Add Guest Registration"
+//        }
         
         updateDateView()
         updateNumberOfGuest()
@@ -141,7 +158,7 @@ class AddRegistrationTableViewController: UITableViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    
+    // MARK:  - Segue
 }
 // MARK: -TableView
 extension AddRegistrationTableViewController {

@@ -507,7 +507,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="dg7-sW-Bsw" kind="relationship" relationship="rootViewController" id="ie8-eU-TWW"/>
+                        <segue destination="dg7-sW-Bsw" kind="relationship" relationship="rootViewController" destinationCreationSelector="editRegistration:" id="ie8-eU-TWW"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x93-GI-ICC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -43,7 +43,7 @@ extension RegistraionTableViewController {
         let registraion = registraion[indexPath.row]
         
         cell.textLabel?.text = registraion.firstname + " " + registraion.lastname
-        cell.detailTextLabel?.text = dateFormatter.string(from: registraion.checkInDate) + " - " + dateFormatter.string(from: registraion.checkOutDate) + ": " + registraion.roomType.name
+        cell.detailTextLabel?.text = dateFormatter.string(from: registraion.checkInDate) + " - " + dateFormatter.string(from: registraion.checkOutDate) + "  :   " + registraion.roomType.name
         
         return cell
     }
@@ -61,4 +61,18 @@ extension RegistraionTableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 88
     }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            registraion.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            Registration.saveRegistration(registraion)
+        }
+    }
+    
+    /// TODO: -  Delete Row
+    ///        Show Registration and editi Registration
+    ///        Hidde Done Button - All textFiled must be filled
+    ///        Add one more section for charges
+    ///
 }
