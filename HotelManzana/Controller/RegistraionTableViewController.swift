@@ -25,6 +25,17 @@ class RegistraionTableViewController: UITableViewController {
             registraion = savedRegistration
         }
     }
+    @IBSegueAction func editRegistration(_ coder: NSCoder, sender: Any?) -> AddRegistrationTableViewController? {
+        
+        if let cell = sender as? UITableViewCell {
+            let indexPath = tableView.indexPath(for: cell)
+            let registrationToEdit = registraion[indexPath!.row]
+            
+            return AddRegistrationTableViewController(_: coder, registration: registrationToEdit )
+        } else {
+            return AddRegistrationTableViewController(_: coder, registration: nil)
+        }
+    }
 }
 
 // MARK: - Table view data source
@@ -55,6 +66,8 @@ extension RegistraionTableViewController {
         registraion.append(registration)
         tableView.reloadData()
         
+        /// TODO: - Alert For complete Registraiotn
+        
         Registration.saveRegistration(registraion)
     }
     
@@ -72,7 +85,5 @@ extension RegistraionTableViewController {
     
     /// TODO:
     ///        Show Registration and editi Registration
-    ///        Hidde Done Button - All textFiled must be filled
     ///        Add one more section for charges
-    ///
 }
